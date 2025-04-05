@@ -9,18 +9,24 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="custom.css">
+
+    <link rel="icon" type="image/png" href="/img/icon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/img/icon/favicon.svg" />
+    <link rel="shortcut icon" href="/img/icon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/icon/apple-touch-icon.png" />
+    <link rel="manifest" href="/img/icon/site.webmanifest" />
 </head>
 <body class="bg-purple-gradient text-white font-roboto">
 
       
 
-    <header class="" id="header">
-        <nav class="flew flex-row flex-1">
-        <div class="container mx-auto px-4 py-2 mt-4">
-            <div class="flex justify-between items-center">
-                <div class="text-xl font-bold hover:text-light-green-custom transition"><a href="index.html">Lorem ipsum</a></div>
-                <div class="space-x-6 font-semibold">
+    <header id="header" class="mx-auto bg-medium-dark-purple-custom max-w-[70%] mt-4 rounded-4xl fixed left-0 right-0 z-50 transition-all duration-300">
+        <nav class="">
+            <div class="flex justify-between items-center max-h-36 px-6 py-2">
+                <div class="object-scale-down"><a href="index.html"><img class="h-20" src="img/icon/faviconGreenIconOnly.svg"></a></div>
+                <div class="space-x-8 font-semibold">
                     <a href="#about" class="hover:text-light-green-custom transition duration-300">About</a>
+                    <a href="#experience" class="hover:text-light-green-custom transition duration-300">Experience</a>
                     <a href="#projects" class="hover:text-light-green-custom transition duration-300">Projects</a>
                     <a href="#contact" class="hover:text-light-green-custom transition duration-300">Contact</a>
                 </div>
@@ -34,7 +40,7 @@
             <div class="flex flex-col max-w-3xl ml-auto mr-auto md:ml-20 lg:ml-32 mb-20">
                 <p class="text-lg font-bold mt-4 text-gray-200">Hey there, I am</p>
                 <h1 class="text-4xl font-bold mt-4 text-light-green-custom">Justas Petronis.</h1>
-                <h2 class="text-3xl font-bold mt-4 text-white">Lorem Ipsum.</h2>
+                <h2 class="text-3xl font-bold mt-4 text-white">Web developer and hobbyist</h2>
                 <p class="text-lg text-gray-200 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec neque a orci pretium pharetra. Sed pharetra eu lectus ut sodales. Suspendisse elit dui, laoreet ut sodales auctor, egestas quis risus.</p>
 
                 <div class="w-full mt-8 inline-flex flex-1 flex-row gap-8 text-center">
@@ -48,7 +54,7 @@
             </div>
         </section>
 
-        <section id="about" class="container mx-auto my-48 px-4 py-16" data-aos="fade-up">
+        <section id="about" class="container mx-auto px-4 py-16" data-aos="fade-up">
             <div class="flex flex-col md:flex-row items-center justify-center gap-8">
                 <div class="w-full md:w-1/2">
                     <h2 class="text-3xl font-bold mb-6 text-light-green-custom border-b pb-4 border-white">About Me</h2>
@@ -236,7 +242,49 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
+    AOS.init({
+      startEvent: 'load',
+    });
     </script>
+    <script>
+        const header = document.getElementById('header');
+        let lastScrollY = window.scrollY;
+
+        // Force browser to apply initial style with transition
+        requestAnimationFrame(() => {
+          header.style.top = "0"; // ensures transition is active
+        });
+
+        window.addEventListener('scroll', () => {
+          if (window.scrollY < lastScrollY) {
+            // Scrolling up
+            header.style.top = "0";
+          } else {
+            // Scrolling down
+            header.style.top = "-10rem"; // adjust to header height
+          }
+          lastScrollY = window.scrollY;
+        });
+
+
+    </script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            AOS.refresh();
+
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                window.scrollTo({
+                    top: targetElement.offsetTop - 250, // Adjust the 50px offset as needed
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
