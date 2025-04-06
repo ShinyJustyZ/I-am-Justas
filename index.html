@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="custom.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+
     <!-- favicons -->
     <link rel="icon" type="image/png" href="/img/icon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/img/icon/favicon.svg" />
@@ -39,7 +41,10 @@
         <section class="container mx-auto mt-8 px-4 flex items-center justify-center min-h-screen" data-aos="fade-up">
             <div class="flex flex-col max-w-3xl ml-auto mr-auto md:ml-20 lg:ml-32 mb-20">
                 <p class="text-lg font-bold mt-4 text-gray-200">Hey there, I am</p>
-                <h1 class="text-4xl font-bold mt-4 text-light-green-custom">Justas Petronis</h1>
+                <h1 class="text-4xl font-bold mt-4 text-light-green-custom">
+                    <span class="animated-letters">Justas</span>
+                    <span class="animated-letters">Petronis</span>
+                </h1>
                 <h2 class="text-3xl font-bold mt-4 text-white">Web developer and hobbyist</h2>
                 <p class="text-lg text-gray-200 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec neque a orci pretium pharetra. Sed pharetra eu lectus ut sodales. Suspendisse elit dui, laoreet ut sodales auctor, egestas quis risus.</p>
 
@@ -307,6 +312,46 @@
             });
         });
     </script>
-
+    <script>
+        window.onload = function () {
+          // === Configurable Variables ===
+          const animationDuration = 0.6;      // duration for each letter animation
+          const letterDelay = 0.03;           // delay between each letter
+          const fromX = -80;                  // horizontal start position (left)
+          const fromY = -80;                  // vertical start position (top)
+          const easing = "expo.out";        // easing for the animation
+        
+          // Automatically wrap each letter in a span
+          const containers = document.querySelectorAll('.animated-letters');
+          containers.forEach(container => {
+            const text = container.textContent;
+            container.innerHTML = ''; // clear text
+            text.split('').forEach(letter => {
+              const span = document.createElement('span');
+              span.textContent = letter;
+              span.classList.add('animated-letter');
+              container.appendChild(span);
+            });
+          });
+      
+          // Select all letters
+          const letters = document.querySelectorAll('.animated-letter');
+      
+          // Animate each letter
+          gsap.fromTo(
+            letters,
+            { opacity: 0, x: fromX, y: fromY },
+            {
+              opacity: 1,
+              x: 0,
+              y: 0,
+              duration: animationDuration,
+              stagger: letterDelay,
+              ease: easing
+            }
+          );
+        };
+      </script>
+  
 </body>
 </html>

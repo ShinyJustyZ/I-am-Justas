@@ -1,0 +1,4 @@
+.animated-letter {
+    display: inline-block;
+    position: relative; /* Required for GSAP to animate x/y */
+  }
