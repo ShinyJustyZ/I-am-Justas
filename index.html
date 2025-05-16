@@ -32,8 +32,8 @@
 <body class="bg-purple-gradient text-white font-roboto">
 
       
-    <div class="fixed bottom-0 left-16 flex flex-col items-center max-h-full transition duration-300 " id="fixed1"> <!-- Left side line and links -->
-        <div class="flex flex-col items-center space-y-8 pb-8">
+    <div class="fixed bottom-0 left-4 md:left-16 flex-col items-center max-h-full transition-opacity duration-300 opacity-100 hidden md:flex" id="fixed1"> <!-- Left side line and links -->
+        <div class="flex flex-col items-center space-y-6 md:space-y-8 pb-6 md:pb-8">
             <a href="#" class="text-white hover:text-light-green-custom transition">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
@@ -50,278 +50,238 @@
                 </svg>
             </a>
         </div>
-        <svg class="h-full w-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 50" preserveAspectRatio="none">
+        <svg class="h-24 md:h-full w-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 50" preserveAspectRatio="none">
             <rect width="1" height="50" fill="gray" />
         </svg>
     </div>
 
-    <!-- <div class="fixed bottom-0 right-16 flex flex-col items-center max-h-full transition" id="fixed2">
-        <div class="flex flex-col items-center space-y-8 pb-8">
-            <a href="#" class="text-white hover:text-light-green-custom transition">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                </svg>
-            </a>
-            <a href="#" class="text-white hover:text-light-green-custom transition">    
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                </svg>
-            </a>
-            <a href="#" class="text-white hover:text-light-green-custom transition">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-                </svg>
-            </a>
-            <a href="#" class="text-white hover:text-light-green-custom transition">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-                </svg>
-            </a>
-        </div>
-        <svg class="h-full w-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 50" preserveAspectRatio="none">
-            <rect width="1" height="50" fill="gray" />
-        </svg>
-    </div> -->
-    <header id="header" class="mx-auto border-2 border-light-purple-custom bg-medium-dark-purple-custom max-w-[70%] mt-4 rounded-4xl fixed left-0 right-0 z-50 transition-all duration-300">
-        <nav class="">
-            <div class="flex justify-between items-center max-h-36 px-6 py-2">
-                <div class="object-scale-down"><a href="index.html"><img class="h-20" src="img/icon/faviconGreenIconOnly.svg"></a></div>
-                <div class="space-x-8 font-semibold">
+    <!-- <div class="fixed bottom-0 right-16 flex flex-col items-center max-h-full transition" id="fixed2"> ... </div> -->
+
+    <header id="header" class="bg-medium-dark-purple-custom fixed left-0 right-0 z-50 transition-all duration-300 w-full md:mx-auto border-b-2 md:border-2 border-light-purple-custom mt-0 md:mt-4 rounded-none md:rounded-4xl md:max-w-[70%]">
+        <nav class="px-4 md:px-6 py-3 md:py-2">
+            <div class="flex justify-between items-center md:max-h-36">
+                <div class="object-scale-down"><a href="index.html"><img class="h-12 sm:h-16 md:h-20" src="img/icon/faviconGreenIconOnly.svg" alt="Logo"></a></div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+
+                <div id="desktop-menu" class="hidden md:flex space-x-8 font-semibold">
                     <a href="#about" class="hover:text-light-green-custom transition duration-300">About</a>
                     <a href="#experience" class="hover:text-light-green-custom transition duration-300">Experience</a>
                     <a href="#projects" class="hover:text-light-green-custom transition duration-300">Projects</a>
                     <a href="#contact" class="hover:text-light-green-custom transition duration-300">Contact</a>
                 </div>
             </div>
-        </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-2 pb-2 border-t border-light-purple-custom/50">
+                <a href="#about" class="block py-2 px-3 text-sm hover:text-light-green-custom transition duration-300">About</a>
+                <a href="#experience" class="block py-2 px-3 text-sm hover:text-light-green-custom transition duration-300">Experience</a>
+                <a href="#projects" class="block py-2 px-3 text-sm hover:text-light-green-custom transition duration-300">Projects</a>
+                <a href="#contact" class="block py-2 px-3 text-sm hover:text-light-green-custom transition duration-300">Contact</a>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section class="container mx-auto mt-8 px-4 flex items-center justify-center min-h-screen" data-aos="fade-up">
-            <div class="flex flex-col max-w-2xl mx-auto mb-20 text-center md:text-left transform -translate-x-30">
-            <p class="text-xl font-bold mt-4 text-gray-200">Hey there, I am</p>
-            <h1 class="text-5xl font-bold mt-4 text-light-green-custom">
-                <span>Justas</span>
-                <span>Petronis</span>
-            </h1>
-            <h2 class="text-4xl font-bold mt-4 text-white">Web developer and hobbyist</h2>
-            <p class="text-xl text-gray-200 mt-4">I build responsive and interactive web experiences with clean code and modern tools. Currently focusing on frontend development and exploring machine learning integration in web applications. Always eager to learn and tackle new challenges in the digital space.</p>
+        <section class="container mx-auto px-4 pt-24 md:pt-0 md:mt-8 flex items-center justify-center min-h-screen" data-aos="fade-up">
+            <div class="flex flex-col max-w-2xl mx-auto mb-12 md:mb-20 text-center md:text-left transform-none md:transform md:-translate-x-30">
+                <p class="text-lg md:text-xl font-bold mt-4 text-gray-200">Hey there, I am</p>
+                <h1 class="text-4xl md:text-5xl font-bold mt-2 md:mt-4 text-light-green-custom">
+                    <span>Justas</span>
+                    <span>Petronis</span>
+                </h1>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 md:mt-4 text-white">Web developer and hobbyist</h2>
+                <p class="text-base md:text-xl text-gray-200 mt-4">I build responsive and interactive web experiences with clean code and modern tools. Currently focusing on frontend development and exploring machine learning integration in web applications. Always eager to learn and tackle new challenges in the digital space.</p>
 
-            <div class="w-full mt-8 inline-flex flex-1 flex-row gap-8 text-center justify-center md:justify-start">
-                <a href="#projects" class="flex items-center space-x-2 rounded-xl p-3 border-2 text-white border-white hover:border-light-green-custom transition">
-                <span class="text-lg font-medium">My work</span>
-                </a>
-                <a href="#contact" class="flex items-center space-x-2 rounded-xl p-3 border-2 text-white border-white hover:border-light-green-custom transition">
-                <span class="text-lg font-medium">Get in touch</span>
-                </a>
-            </div>
+                <div class="w-full mt-8 flex flex-col md:inline-flex md:flex-1 md:flex-row gap-4 md:gap-8 text-center justify-center md:justify-start">
+                    <a href="#projects" class="flex items-center justify-center space-x-2 rounded-xl p-2 md:p-3 border-2 text-white border-white hover:border-light-green-custom transition">
+                        <span class="text-base md:text-lg font-medium">My work</span>
+                    </a>
+                    <a href="#contact" class="flex items-center justify-center space-x-2 rounded-xl p-2 md:p-3 border-2 text-white border-white hover:border-light-green-custom transition">
+                        <span class="text-base md:text-lg font-medium">Get in touch</span>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section id="about" class="container mx-auto px-4 py-16" data-aos="fade-up">
+        <section id="about" class="container mx-auto px-4 py-12 md:py-16" data-aos="fade-up">
             <div class="flex flex-col md:flex-row items-center justify-center gap-8">
                 <div class="w-full md:w-1/2">
-                    <h2 class="text-3xl font-bold mb-6 text-light-green-custom border-b pb-4 border-white">About</h2>
-                    <p class="text-gray-200 mb-4">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-light-green-custom border-b pb-4 border-white">About</h2>
+                    <p class="text-gray-200 mb-4 text-sm md:text-base">
                         I'm a passionate developer with experience in building modern web applications. My journey in programming started with a curiosity about how things work on the web.
                     </p>
-                    <p class="text-gray-200 mb-4">
+                    <p class="text-gray-200 mb-4 text-sm md:text-base">
                         I specialize in frontend technologies like HTML, CSS, and JavaScript, with expertise in frameworks like React and tools like Tailwind CSS.
                     </p>
-                    <p class="text-gray-200">
+                    <p class="text-gray-200 text-sm md:text-base">
                         When I'm not coding, you can find me exploring new technologies, reading tech blogs, or contributing to open-source projects.
                     </p>
                 </div>
                 <div class="w-full md:w-1/2 flex justify-center">
-                    <div class="bg-medium-dark-purple-custom border-light-purple-custom border-2 p-6 rounded-lg max-w-md shadow-lg">
-                        <h3 class="text-2xl font-bold mb-6 text-light-green-custom text-center">Skills</h3>
-                        <div class="grid grid-cols-2 gap-4">
-                            <ul class="space-y-4">
+                    <div class="bg-medium-dark-purple-custom border-light-purple-custom border-2 p-4 md:p-6 rounded-lg w-full max-w-md shadow-lg">
+                        <h3 class="text-xl md:text-2xl font-bold mb-6 text-light-green-custom text-center">Skills</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
+                            <ul class="space-y-3 md:space-y-4">
                                 <li class="flex items-center">
-                                    <span class="bg-light-green-custom w-3 h-3 rounded-full mr-4"></span>
-                                    <span class="text-gray-200">HTML/CSS</span>
+                                    <span class="bg-light-green-custom w-2 h-2 md:w-3 md:h-3 rounded-full mr-3 md:mr-4"></span>
+                                    <span class="text-gray-200 text-sm md:text-base">HTML/CSS</span>
                                 </li>
                                 <li class="flex items-center">
-                                    <span class="bg-light-green-custom w-3 h-3 rounded-full mr-4"></span>
-                                    <span class="text-gray-200">JavaScript</span>
+                                    <span class="bg-light-green-custom w-2 h-2 md:w-3 md:h-3 rounded-full mr-3 md:mr-4"></span>
+                                    <span class="text-gray-200 text-sm md:text-base">JavaScript</span>
                                 </li>
                                 <li class="flex items-center">
-                                    <span class="bg-light-green-custom w-3 h-3 rounded-full mr-4"></span>
-                                    <span class="text-gray-200">Tailwind CSS</span>
+                                    <span class="bg-light-green-custom w-2 h-2 md:w-3 md:h-3 rounded-full mr-3 md:mr-4"></span>
+                                    <span class="text-gray-200 text-sm md:text-base">Tailwind CSS</span>
                                 </li>
                             </ul>
-                            <ul class="space-y-4">
+                            <ul class="space-y-3 md:space-y-4">
                                 <li class="flex items-center">
-                                    <span class="bg-light-green-custom w-3 h-3 rounded-full mr-4"></span>
-                                    <span class="text-gray-200">Git</span>
+                                    <span class="bg-light-green-custom w-2 h-2 md:w-3 md:h-3 rounded-full mr-3 md:mr-4"></span>
+                                    <span class="text-gray-200 text-sm md:text-base">Git</span>
                                 </li>
                                 <li class="flex items-center">
-                                    <span class="bg-light-green-custom w-3 h-3 rounded-full mr-4"></span>
-                                    <span class="text-gray-200">Machine Learning</span>
+                                    <span class="bg-light-green-custom w-2 h-2 md:w-3 md:h-3 rounded-full mr-3 md:mr-4"></span>
+                                    <span class="text-gray-200 text-sm md:text-base">Machine Learning</span>
                                 </li>
                                 <li class="flex items-center">
-                                    <span class="bg-light-green-custom w-3 h-3 rounded-full mr-4"></span>
-                                    <span class="text-gray-200">C++</span>
+                                    <span class="bg-light-green-custom w-2 h-2 md:w-3 md:h-3 rounded-full mr-3 md:mr-4"></span>
+                                    <span class="text-gray-200 text-sm md:text-base">C++</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="mt-24">
-                <div id="image-gallery" class="grid grid-cols-2 md:grid-cols-5 gap-4">
-                    <a href="img/gallery/plane.webp" data-fancybox="gallery" class="hover:opacity-80 transition">
-                        <img src="img/gallery/thumbnail/plane.webp" alt="Gallery Image 1" class="w-full h-40 object-cover rounded-lg"/>
+            <div class="mt-16 md:mt-24">
+                <div id="image-gallery" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                    <a href="img/gallery/plane.webp" data-fancybox="gallery" class="hover:opacity-80 transition block">
+                        <img src="img/gallery/thumbnail/plane.webp" alt="Gallery Image 1" class="w-full h-32 md:h-40 object-cover rounded-lg"/>
                     </a>
-                    <a href="img/gallery/paris.webp" data-fancybox="gallery" class="hover:opacity-80 transition">
-                        <img src="img/gallery/thumbnail/paris.webp" alt="Gallery Image 2" class="w-full h-40 object-cover rounded-lg"/>
+                    <a href="img/gallery/paris.webp" data-fancybox="gallery" class="hover:opacity-80 transition block">
+                        <img src="img/gallery/thumbnail/paris.webp" alt="Gallery Image 2" class="w-full h-32 md:h-40 object-cover rounded-lg"/>
                     </a>
-                    <a href="img/gallery/mountains.webp" data-fancybox="gallery" class="hover:opacity-80 transition">
-                        <img src="img/gallery/thumbnail/mountains.webp" alt="Gallery Image 3" class="w-full h-40 object-cover rounded-lg"/>
+                    <a href="img/gallery/mountains.webp" data-fancybox="gallery" class="hover:opacity-80 transition block">
+                        <img src="img/gallery/thumbnail/mountains.webp" alt="Gallery Image 3" class="w-full h-32 md:h-40 object-cover rounded-lg"/>
                     </a>
-                    <a href="img/gallery/food.webp" data-fancybox="gallery" class="hover:opacity-80 transition">
-                        <img src="img/gallery/thumbnail/food.webp" alt="Gallery Image 4" class="w-full h-40 object-cover rounded-lg"/>
+                    <a href="img/gallery/food.webp" data-fancybox="gallery" class="hover:opacity-80 transition block">
+                        <img src="img/gallery/thumbnail/food.webp" alt="Gallery Image 4" class="w-full h-32 md:h-40 object-cover rounded-lg"/>
                     </a>
-
-                    <a href="img/gallery/dog.webp" data-fancybox="gallery" class="hover:opacity-80 transition">
-                        <img src="img/gallery/thumbnail/dog.webp" alt="Gallery Image 5" class="w-full h-40 object-cover rounded-lg"/>
+                    <a href="img/gallery/dog.webp" data-fancybox="gallery" class="hover:opacity-80 transition block">
+                        <img src="img/gallery/thumbnail/dog.webp" alt="Gallery Image 5" class="w-full h-32 md:h-40 object-cover rounded-lg"/>
                     </a>
                 </div>
             </div>
-              
-            
         </section>
 
-        <!-- Experience section -->
-        <section id="experience" class="container mx-auto my-28 px-4 py-16" data-aos="fade-up">
-            <h2 class="text-3xl font-bold mb-10 text-light-green-custom border-b pb-4 border-white">Experience</h2>
+        <section id="experience" class="container mx-auto my-16 md:my-28 px-4 py-12 md:py-16" data-aos="fade-up">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-10 text-light-green-custom border-b pb-4 border-white">Experience</h2>
             <div class="relative">
-                <!-- Vertical timeline line -->
-                <div class="absolute left-4 md:left-6 top-0 bottom-0 w-0.5 bg-light-green-custom"></div>
-                
-                <!-- Timeline items -->
-                <div class="space-y-12">
-                    <!-- Experience 1 -->
+                <div class="absolute left-3 sm:left-4 md:left-6 top-0 bottom-0 w-0.5 bg-light-green-custom"></div>
+                <div class="space-y-10 md:space-y-12">
                     <div class="flex items-start relative">
-                        <div class="absolute left-0 w-8 h-8 md:w-12 md:h-12 bg-medium-dark-purple-custom rounded-full border-2 border-light-green-custom flex items-center justify-center z-10">
-                            <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <div class="absolute left-0 w-6 h-6 sm:w-8 md:w-12 md:h-12 bg-medium-dark-purple-custom rounded-full border-2 border-light-green-custom flex items-center justify-center z-10">
+                            <svg class="w-4 h-4 md:w-6 md:h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 20v-9l-4 1.125V20h4Zm0 0h8m-8 0V6.66667M16 20v-9l4 1.125V20h-4Zm0 0V6.66667M18 8l-6-4-6 4m5 1h2m-2 3h2"/>
                             </svg>
                         </div>
-                        <div class="ml-16 md:ml-20">
-                            <h3 class="text-xl font-bold text-light-green-custom">Kaunas "Varpas" Gymnasium</h3>
-                            <p class="text-gray-300">2024 - Present</p>
-                            <p class="mt-2 text-gray-200">Consistently ranking among the top three students in my class, I have taken part in various competitions, including programming and geography, achieving a top 5 placement city-wide. These experiences have sharpened my critical thinking and strategic problem-solving skills.</p>
+                        <div class="ml-12 sm:ml-16 md:ml-20">
+                            <h3 class="text-lg md:text-xl font-bold text-light-green-custom">Kaunas "Varpas" Gymnasium</h3>
+                            <p class="text-gray-300 text-sm md:text-base">2024 - Present</p>
+                            <p class="mt-2 text-gray-200 text-sm md:text-base">Consistently ranking among the top three students in my class, I have taken part in various competitions, including programming and geography, achieving a top 5 placement city-wide. These experiences have sharpened my critical thinking and strategic problem-solving skills.</p>
                         </div>
                     </div>
-                    
-                    <!-- Experience 2 -->
                     <div class="flex items-start relative">
-                        <div class="absolute left-0 w-8 h-8 md:w-12 md:h-12 bg-medium-dark-purple-custom rounded-full border-2 border-light-green-custom flex items-center justify-center z-10">
-                            <svg class="w-6 h-6 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                         <div class="absolute left-0 w-6 h-6 sm:w-8 md:w-12 md:h-12 bg-medium-dark-purple-custom rounded-full border-2 border-light-green-custom flex items-center justify-center z-10">
+                            <svg class="w-4 h-4 md:w-6 md:h-6 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v5m-3 0h6M4 11h16M5 15h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1Z"/>
                               </svg>                              
                         </div>
-                        <div class="ml-16 md:ml-20">
-                            <h3 class="text-xl font-bold text-light-green-custom">Web Development Course — School for Young Programmers, Kaunas University of Technology</h3>
-                            <p class="text-gray-300">2024 - 2025</p>
-                            <p class="mt-2 text-gray-200">At this course, I built this website as a final project, honing my skills in modern web technologies, design, and user experience. It was a pivotal step in my web development journey.</p>
+                        <div class="ml-12 sm:ml-16 md:ml-20">
+                            <h3 class="text-lg md:text-xl font-bold text-light-green-custom">Web Development Course — School for Young Programmers, Kaunas University of Technology</h3>
+                            <p class="text-gray-300 text-sm md:text-base">2024 - 2025</p>
+                            <p class="mt-2 text-gray-200 text-sm md:text-base">At this course, I built this website as a final project, honing my skills in modern web technologies, design, and user experience. It was a pivotal step in my web development journey.</p>
                         </div>
                     </div>
-                    
-                    <!-- Experience 3 -->
                     <div class="flex items-start relative">
-                        <div class="absolute left-0 w-8 h-8 md:w-12 md:h-12 bg-medium-dark-purple-custom rounded-full border-2 border-light-green-custom flex items-center justify-center z-10">
-                            <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <div class="absolute left-0 w-6 h-6 sm:w-8 md:w-12 md:h-12 bg-medium-dark-purple-custom rounded-full border-2 border-light-green-custom flex items-center justify-center z-10">
+                           <svg class="w-4 h-4 md:w-6 md:h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 20v-9l-4 1.125V20h4Zm0 0h8m-8 0V6.66667M16 20v-9l4 1.125V20h-4Zm0 0V6.66667M18 8l-6-4-6 4m5 1h2m-2 3h2"/>
                             </svg>
                         </div>
-                        <div class="ml-16 md:ml-20">
-                            <h3 class="text-xl font-bold text-light-green-custom">Vytautas Magnus University Classical Education School</h3>
-                            <p class="text-gray-300">2016 - 2024</p>
-                            <p class="mt-2 text-gray-200">At Vytautas Magnus University Classical Education School, I consistently excelled academically. Participating in IT, geography, and mathematics competitions helped me cultivate a strong analytical approach and a passion for solving challenging problems.</p>
+                        <div class="ml-12 sm:ml-16 md:ml-20">
+                            <h3 class="text-lg md:text-xl font-bold text-light-green-custom">Vytautas Magnus University Classical Education School</h3>
+                            <p class="text-gray-300 text-sm md:text-base">2016 - 2024</p>
+                            <p class="mt-2 text-gray-200 text-sm md:text-base">At Vytautas Magnus University Classical Education School, I consistently excelled academically. Participating in IT, geography, and mathematics competitions helped me cultivate a strong analytical approach and a passion for solving challenging problems.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-
-
-
-
-
-        <!-- Projects section -->
-        <section id="projects" class="container mx-auto px-4 py-16 my-28" data-aos="fade-up">
-            <h2 class="text-3xl font-bold mb-10 text-light-green-custom border-b pb-4 border-white">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Project Card 1 -->
-                <div class="bg-medium-dark-purple-custom border-light-purple-custom border-2 rounded-lg overflow-hidden shadow-lg">
-                    <div class="h-48 bg-gray-700">
-                        <!-- Project image placeholder -->
-                        <img src="img/portfolio_banner_project.jpg" alt="Project 1" class="w-full h-full object-cover" onerror="this.src='placeholder.jpg'">
+        <section id="projects" class="container mx-auto px-4 py-12 md:py-16 my-16 md:my-28" data-aos="fade-up">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-10 text-light-green-custom border-b pb-4 border-white">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <div class="bg-medium-dark-purple-custom border-light-purple-custom border-2 rounded-lg overflow-hidden shadow-lg flex flex-col">
+                    <div class="h-40 md:h-48 bg-gray-700">
+                        <img src="img/portfolio_banner_project.jpg" alt="Project 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-gray-600 text-gray-400\'>Image not found</div>'">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-light-green-custom">Justas's portfolio</h3>
-                        <p class="text-gray-200 mb-4">This is the website you are currently on! I created this portfolio to have a central space where I can put my projects in and demonstrate some of them.</p>
-                        <div class="flex justify-between">
-                            <a href="#" class="text-blue-400 hover:text-light-green-custom transition">Website</a>
+                    <div class="p-4 md:p-6 flex-grow flex flex-col">
+                        <h3 class="text-lg md:text-xl font-bold mb-2 text-light-green-custom">Justas's portfolio</h3>
+                        <p class="text-gray-200 mb-4 text-sm md:text-base flex-grow">This is the website you are currently on! I created this portfolio to have a central space where I can put my projects in and demonstrate some of them.</p>
+                        <div class="mt-auto">
+                            <a href="#" class="text-blue-400 hover:text-light-green-custom transition text-sm md:text-base">Website</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project Card 2 -->
-                <div class="bg-medium-dark-purple-custom border-light-purple-custom border-2 rounded-lg overflow-hidden shadow-lg">
-                    <div class="h-48 bg-gray-700">
-                        <img src="img/nordicbaltic_banner_project.jpg" alt="Nordic baltic banner" class="w-full h-full object-cover" onerror="this.src='placeholder.jpg'">
+                <div class="bg-medium-dark-purple-custom border-light-purple-custom border-2 rounded-lg overflow-hidden shadow-lg flex flex-col">
+                    <div class="h-40 md:h-48 bg-gray-700">
+                        <img src="img/nordicbaltic_banner_project.jpg" alt="Nordic baltic banner" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-gray-600 text-gray-400\'>Image not found</div>'">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-light-green-custom">Nordic + Baltic BTE</h3>
-                        <p class="text-gray-200 mb-4">As a co-owner of the Nordic + Baltic BTE digital video game project, I serve as the technical lead, focusing primarily on server management.</p>
-                        <div class="flex justify-between">
-                            <a href="https://buildtheearth.net/teams/nb" class="text-blue-400 hover:text-light-green-custom transition">Project page</a>
+                    <div class="p-4 md:p-6 flex-grow flex flex-col">
+                        <h3 class="text-lg md:text-xl font-bold mb-2 text-light-green-custom">Nordic + Baltic BTE</h3>
+                        <p class="text-gray-200 mb-4 text-sm md:text-base flex-grow">As a co-owner of the Nordic + Baltic BTE digital video game project, I serve as the technical lead, focusing primarily on server management.</p>
+                        <div class="mt-auto">
+                            <a href="https://buildtheearth.net/teams/nb" class="text-blue-400 hover:text-light-green-custom transition text-sm md:text-base">Project page</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project Card 3 -->
-                <div class="bg-medium-dark-purple-custom border-light-purple-custom border-2 rounded-lg overflow-hidden shadow-lg">
-                    <div class="h-48 bg-gray-700">
-                        <img src="img/bte_banner_project.jpg" alt="Build the earth banner" class="w-full h-full object-cover" onerror="this.src='placeholder.jpg'">
+                <div class="bg-medium-dark-purple-custom border-light-purple-custom border-2 rounded-lg overflow-hidden shadow-lg flex flex-col">
+                    <div class="h-40 md:h-48 bg-gray-700">
+                        <img src="img/bte_banner_project.jpg" alt="Build the earth banner" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-gray-600 text-gray-400\'>Image not found</div>'">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-light-green-custom">Build The Earth</h3>
-                        <p class="text-gray-200 mb-4">As a support team member for the Build The Earth digital game project, I assist users with their requests and issues.</p>
-                        <div class="flex justify-between">
-                            <a href="https://buildtheearth.net" class="text-blue-400 hover:text-light-green-custom transition">Website</a>
+                    <div class="p-4 md:p-6 flex-grow flex flex-col">
+                        <h3 class="text-lg md:text-xl font-bold mb-2 text-light-green-custom">Build The Earth</h3>
+                        <p class="text-gray-200 mb-4 text-sm md:text-base flex-grow">As a support team member for the Build The Earth digital game project, I assist users with their requests and issues.</p>
+                        <div class="mt-auto">
+                            <a href="https://buildtheearth.net" class="text-blue-400 hover:text-light-green-custom transition text-sm md:text-base">Website</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project Card 4 -->
-                <div class="bg-medium-dark-purple-custom border-light-purple-custom border-2 rounded-lg overflow-hidden shadow-lg">
-                    <div class="h-48 bg-gray-700">
-                        <img src="img/protochess_banner_project.jpg" alt="ProtoChess banner" class="w-full h-full object-cover" onerror="this.src='placeholder.jpg'">
+                <div class="bg-medium-dark-purple-custom border-light-purple-custom border-2 rounded-lg overflow-hidden shadow-lg flex flex-col">
+                    <div class="h-40 md:h-48 bg-gray-700">
+                         <img src="img/protochess_banner_project.jpg" alt="ProtoChess banner" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-gray-600 text-gray-400\'>Image not found</div>'">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-light-green-custom">ProtoChess</h3>
-                        <p class="text-gray-200 mb-4">A highly experimental chess bot I'm creating for educational purposes. It is not designed to be used in chess game analysis or to compete with others.</p>
-                        <div class="flex justify-between">
-                            <p class="text-gray-400 transition">Demo coming soon...</p>
+                    <div class="p-4 md:p-6 flex-grow flex flex-col">
+                        <h3 class="text-lg md:text-xl font-bold mb-2 text-light-green-custom">ProtoChess</h3>
+                        <p class="text-gray-200 mb-4 text-sm md:text-base flex-grow">A highly experimental chess bot I'm creating for educational purposes. It is not designed to be used in chess game analysis or to compete with others.</p>
+                        <div class="mt-auto">
+                            <p class="text-gray-400 transition text-sm md:text-base">Demo coming soon...</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Contact section -->
-        <section id="contact" class="container mx-auto px-4 py-16 text-center my-48" data-aos="fade-up">
-            <h2 class="text-3xl font-bold mb-6 text-light-green-custom border-b pb-4 border-white">Get In Touch</h2>
-            <p class="text-gray-200 max-w-2xl mx-auto mb-8">
+
+        <section id="contact" class="container mx-auto px-4 py-12 md:py-16 text-center my-24 md:my-48" data-aos="fade-up">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-light-green-custom border-b pb-4 border-white">Get In Touch</h2>
+            <p class="text-gray-200 max-w-lg sm:max-w-xl md:max-w-2xl mx-auto mb-8 text-sm md:text-base">
                 Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
             </p>
-            <div class="mt-6"></div>
-            <ul class="flex justify-center space-x-6">
+            <ul class="flex justify-center space-x-4 md:space-x-6">
                 <li>
                     <a href="#" class="text-white hover:text-light-green-custom transition">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
@@ -343,16 +303,13 @@
                         </svg>
                     </a>
                 </li>
-
             </ul>
-        </div>
-
         </section>
     </main>
     <footer id="footer">
-        <div class="bg-medium-dark-purple-custom border-t-2 border-light-purple-custom text-gray-200 py-8">
-            <div class="container mx-auto text-center">
-                <p class="text-sm">Designed and developed by Justas Petronis.</p>
+        <div class="bg-medium-dark-purple-custom border-t-2 border-light-purple-custom text-gray-200 py-6 md:py-8">
+            <div class="container mx-auto text-center px-4">
+                <p class="text-xs md:text-sm">Designed and developed by Justas Petronis.</p>
             </div>
         </div>
     </footer>
@@ -361,77 +318,124 @@
     <script>
     AOS.init({
       startEvent: 'load',
+      once: true, 
+      duration: 800,
     });
     </script>
     <script>
         const header = document.getElementById('header');
         let lastScrollY = window.scrollY;
+        const mdBreakpoint = 768; 
 
-        // Force browser to apply initial style with transition
-        requestAnimationFrame(() => {
-          header.style.top = "0"; // ensures transition is active
-        });
+        if (header) {
+            const desktopHeaderTopMargin = "1rem"; 
+            const mobileHeaderTopMargin = "0px";
 
-        window.addEventListener('scroll', () => {
-          if (window.scrollY < lastScrollY) {
-            // Scrolling up
-            header.style.top = "0";
-          } else {
-            // Scrolling down
-            header.style.top = "-10rem"; // adjust to header height
-          }
-          lastScrollY = window.scrollY;
-        });
+            const getHeaderTopPosition = () => {
+                return window.innerWidth >= mdBreakpoint ? desktopHeaderTopMargin : mobileHeaderTopMargin;
+            };
+            
+            requestAnimationFrame(() => {
+              header.style.top = getHeaderTopPosition();
+            });
 
+            window.addEventListener('scroll', () => {
+                const currentScrollY = window.scrollY;
+                const currentHeaderTop = getHeaderTopPosition();
 
+                if (currentScrollY < lastScrollY || currentScrollY <= 50) { 
+                    header.style.top = currentHeaderTop;
+                } else { 
+                    header.style.top = `-${header.offsetHeight + 20}px`; 
+                }
+                lastScrollY = currentScrollY < 0 ? 0 : currentScrollY;
+            });
+             window.addEventListener('resize', () => {
+                header.style.top = getHeaderTopPosition();
+            });
+        }
     </script>
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            AOS.refresh();
-
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
+                AOS.refreshHard(); 
 
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
 
-                window.scrollTo({
-                    top: targetElement.offsetTop - 250, // Adjust the 50px offset as needed
-                    behavior: 'smooth'
-                });
+                if (targetElement) {
+                    const headerElement = document.getElementById('header');
+                    let headerHeight = 0;
+                    if (headerElement && getComputedStyle(headerElement).position === 'fixed') {
+                        headerHeight = headerElement.offsetHeight;
+                    }
+                    
+                    let scrollOffset = headerHeight + (window.innerWidth >= 768 ? 60 : 30);
+
+                    window.scrollTo({
+                        top: targetElement.offsetTop - scrollOffset,
+                        behavior: 'smooth'
+                    });
+
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    const mobileMenuButton = document.getElementById('mobile-menu-button');
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        if(mobileMenuButton) mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    }
+                }
             });
         });
     </script>
-      <script>
-        // Get references to the fixed elements and footer
-        const fixed1 = document.getElementById('fixed1');
-        const fixed2 = document.getElementById('fixed2');
-        const elementToHideBy = document.getElementById('contact');
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-        // Listen to the scroll event
-        window.addEventListener('scroll', function () {
-          const sensorPosition = elementToHideBy.getBoundingClientRect().top;
-          const windowHeight = window.innerHeight;
-        
-          // Check if the footer is close to the viewport (we want to fade out before it reaches the bottom)
-          if (sensorPosition < windowHeight) {
-            // Fade out elements (set opacity to 0 and apply transition)
-            fixed1.classList.add('opacity-0');
-            fixed2.classList.add('opacity-0');
-          } else {
-            // Fade in elements (set opacity to 100 and apply transition)
-            fixed1.classList.remove('opacity-0');
-            fixed2.classList.remove('opacity-0');
-          }
-        });
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            });
 
-      </script>
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) { 
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+    </script>
+    <script>
+        const fixed1Element = document.getElementById('fixed1');
+        const contactSection = document.getElementById('contact');
+
+        if (fixed1Element && contactSection) {
+            window.addEventListener('scroll', function () {
+                // Check if fixed1 is meant to be displayed (md screens and up)
+                if (getComputedStyle(fixed1Element).display !== 'none') {
+                    const contactRect = contactSection.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+                    
+                    // Start fading out when the top of the contact section is, e.g., 200px from the bottom of the viewport
+                    // This means it starts fading as 'contact' section approaches.
+                    if (contactRect.top < windowHeight - 150) { 
+                        fixed1Element.classList.remove('opacity-100');
+                        fixed1Element.classList.add('opacity-0');
+                    } else {
+                        fixed1Element.classList.remove('opacity-0');
+                        fixed1Element.classList.add('opacity-100');
+                    }
+                }
+            });
+        }
+    </script>
     <script>
         Fancybox.bind("[data-fancybox]", {
-  // Your custom options
-});
+          // Your custom options
+        });
     </script>
       
-  
 </body>
 </html>
